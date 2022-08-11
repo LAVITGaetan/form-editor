@@ -1,0 +1,20 @@
+[{
+        "id": 1,
+        "type": "identite",
+        "order": 1
+    },
+    {
+        "id": 2,
+        "type": "email",
+        "order": 2
+    },
+    {
+        "id": 3,
+        "type": "telephone",
+        "order": 3
+    },
+    {
+        "id": 4,
+        "type": "entreprise",
+        "order": 4
+}]

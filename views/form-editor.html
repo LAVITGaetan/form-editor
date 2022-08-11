@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau formulaire</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="navbar">
+            <div class="navbar-links">
+                <div class="navbar-link">Accueil</div>
+                <div class="navbar-link">Adhérents</div>
+                <div class="navbar-link">Mandats</div>
+                <div class="navbar-link">Formulaire</div>
+                <div class="navbar-link">Autres</div>
+            </div>
+            <div class="navbar-action">Ajouter un adhérent</div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-title">
+                <h3 class="title-white">Ajouter un champ</h3>
+            </div>
+            <div class="sidebar-content">
+                <div onclick="generateInput('text')" class="sidebar-item button" name="text"><img src="../img/text.svg"
+                        width="32px" height="32px" alt="text" class="item-icon">
+                    <div class="item-title">Texte</div>
+                </div>
+                <div onclick="generateInput('date')" class="sidebar-item button" name="date"><img src="../img/date.svg"
+                        width="32px" height="32px" alt="date" class="item-icon">
+                    <div class="item-title">Date</div>
+                </div>
+                <div onclick="generateInput('radio')" class="sidebar-item button" name="radio"><img
+                        src="../img/radio.svg" width="32px" height="32px" alt="radio" class="item-icon">
+                    <div class="item-title">Choix</div>
+                </div>
+                <div onclick="generateInput('slide')" class="sidebar-item button" name="text"><img
+                        src="../img/text-long.svg" width="32px" height="32px" alt="text" class="item-icon">
+                    <div class="item-title">Sélecteur</div>
+                </div>
+                <div onclick="generateInput('identite')" class="sidebar-item button" name="identite"><img
+                        src="../img/identite.svg" width="32px" height="32px" alt="identite" class="item-icon">
+                    <div class="item-title">Identité</div>
+                </div>
+                <div onclick="generateInput('entreprise')" class="sidebar-item button" name="entreprise"><img
+                        src="../img/entreprise.svg" width="32px" height="32px" alt="entreprise" class="item-icon">
+                    <div class="item-title">Entreprise</div>
+                </div>
+                <div onclick="generateInput('email')" class="sidebar-item button" name="email"><img
+                        src="../img/email.svg" width="32px" height="32px" alt="email" class="item-icon">
+                    <div class="item-title">Email</div>
+                </div>
+                <div onclick="generateInput('telephone')" class="sidebar-item button" name="telephone"><img
+                        src="../img/telephone.svg" width="32px" height="32px" alt="telephone" class="item-icon">
+                    <div class="item-title">Téléphone</div>
+                </div>
+            </div>
+            <div class="sidebar-action">Enregistrer le formulaire</div>
+        </div>
+        <div class="editor">
+
+            <h2 class="editor-title" contenteditable>Titre du formulaire</h2>
+            <div id="form-container">
+                <div class="element-container" id="container1" style="order: 1"><label class="label"
+                        contenteditable="true">Raison sociale de
+                        l' entreprise</label><input type="text" class="input" placeholder="Réponse">
+                    <div class="delete" id="delete1" name="1" onclick="destroyInput(1)"></div>
+                    <div class="down" id="down1" name="1" onclick="slideDown(1)"></div>
+                    <div class="up" id="up1" name="1" onclick="slideUp(1)"></div>
+                    <div class="editor-add" onclick="generateSideInput(1)">
+                        <img src="../img/add.svg" alt="add" width="16px" height="16px">
+                    </div>
+                </div>
+
+            </div>
+
+            </h2>
+        </div>
+    </div>
+</body>
+<script src="../app.js"></script>
+
+</html>
